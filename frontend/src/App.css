@@ -2,6 +2,10 @@ li {
   list-style: none;
 }
 
+.checj {
+  width: 10rem;
+}
+
 a {
   text-decoration: none;
 }
