@@ -1,0 +1,16 @@
+extends bace
+
+block content
+    .signin-page
+        .signin-box
+            h1.signin-heading Welcome to Pizppy
+            form.signin-form
+                label.signin-label(for='Email') Enter your Email : 
+                input#Email.signin-input(type='email' placeholder='name@gmail.com')
+                label.signin-label(for='Password')
+                    | Enter your Password :
+                input#Password.signin-input.signin-input--password(type='password' placeholder='Pass@1234')
+                label.signin-label(for='Password')
+                    | Confirm your Password :
+                input#Password.signin-input.signin-input--password(type='password' placeholder='Pass@1234')
+                button.signin-submit-btn(type='submit') submit

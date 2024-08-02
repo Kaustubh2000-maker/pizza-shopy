@@ -1,0 +1,13 @@
+extends bace
+
+block content
+    .login-page
+        .login-box
+            h1.login-heading Login to Pizppy
+            form.login-form
+                label.login-label(for='Email') Enter your Email : 
+                input#Email.login-input(type='email' placeholder='name@gmail.com')
+                label.login-label(for='Password')
+                    | Enter your Password :
+                input#Password.login-input.login-input--password(type='password' placeholder='MySuperSecretPassword')
+                button.login-submit-btn(type='submit') submit

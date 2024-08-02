@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizpy | Fresh Pizza at Door</title>
+    <link rel="stylesheet" href="./../css/main.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header class="Header-bar">
+      <nav class="nav-bar grid-align-justify">
+        <div class="nav-logo-box">
+          <h1 class="nav-logo">Pizppy</h1>
+          <img
+            src="./../pizza images/pizza-Logo.png"
+            alt="rotating logo"
+            class="logo-rotate"
+          />
+        </div>
+
+        <div class="nav-search-bar-div">
+          <ion-icon name="pizza" class="nav-search-bar-pizza-logo"></ion-icon>
+          <input
+            class="nav-search-bar"
+            type="search"
+            placeholder="find your fevorate pizzaa 😋"
+          />
+        </div>
+
+        <div class="nav-btn-div grid-align-justify">
+          <a class="nav-btn btn-sign-in" href="#">Sing In</a>
+          <a class="nav-btn btn-donate" href="#">Donate</a>
+          <a class="nav-btn btn-log-in" href="#">Login</a>
+          <a class="nav-btn btn-help" href="#">Help</a>
+        </div>
+      </nav>
+    </header>
+    <div class="order-bar flex-align-justify">
+      <ul>
+        <li>Ongoing-offers on Unlimited pizza</li>
+        <li>Ongoing-offers on pepperoni pizza</li>
+        <li>won prise on sharing recipe</li>
+        <li>special offer on two combo pizza</li>
+      </ul>
+    </div>
+    <!-- above order-bar css inclued in header -->
+    <div class="testimonial-Offer-container">
+      <div class="testimonial-Offer-banner">
+        <div class="slider offer-banner offer-banner-1">
+          <a href="">
+            <img
+              src="./../pizza images/offers/offer-2.PNG"
+              class="pizza-offfer-image"
+              alt="Offers on pizza at pizppy"
+            />
+          </a>
+        </div>
+        <div class="slider offer-banner offer-banner-2">
+          <a href="">
+            <img
+              src="./../pizza images/offers/offer-3.PNG"
+              class="pizza-offfer-image"
+              alt="Offers on pizza at pizppy"
+            />
+          </a>
+        </div>
+        <div class="slider testimonial-container">
+          <div class="testimonial testimonial-1">
+            <div class="testimonial-img-container">
+              <img
+                src="./../pizza images/coustomers/customer-3.jpg"
+                alt="customer reviwes"
+                class="testimonial-customer-img"
+              />
+              <h4 class="testimonial-customer-name">customer Name</h4>
+            </div>
+            <blockquote class="testimonial-customer-review">
+              Amazing app! Pizppy makes ordering pizza so easy and convenient.
+              The user interface is sleek, and the delivery is always on time.
+              The pizzas are delicious every single time!
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="grid-3-col main-grid">
+      <div class="beverages-box height-width-border-scroll">
+        <h1 class="box-headings">Beverages</h1>
+        <div class="beverages-container">
+          <div class="beverages-card">
+            <img
+              src="./../pizza images/beverages/coca-cola.jpeg"
+              alt="coca-cola"
+              class="beverages-image"
+            />
+            <h4 class="beverages-name">Coca cola</h4>
+
+            <button class="beverages-add-btn">+Add</button>
+          </div>
+          <div class="beverages-card">
+            <img
+              src="./../pizza images/beverages/sprite.jpg"
+              alt="sprite"
+              class="beverages-image"
+            />
+            <h4 class="beverages-name">sprite</h4>
+
+            <button class="beverages-add-btn">+Add</button>
+          </div>
+          <div class="beverages-card">
+            <img
+              src="./../pizza images/beverages/mirinda.jpg"
+              alt="mirinda"
+              class="beverages-image"
+            />
+            <h4 class="beverages-name">mirinda</h4>
+
+            <button class="beverages-add-btn">+Add</button>
+          </div>
+          <div class="beverages-card">
+            <img
+              src="./../pizza images/beverages/mountain-dew.jpg"
+              alt="mountain dew"
+              class="beverages-image"
+            />
+            <h4 class="beverages-name">mountain-dew</h4>
+
+            <button class="beverages-add-btn">+Add</button>
+          </div>
+          <div class="beverages-card">
+            <img
+              src="./../pizza images/beverages/pepsi.jpg"
+              alt="pepsi"
+              class="beverages-image"
+            />
+            <h4 class="beverages-name">pepsi</h4>
+
+            <button class="beverages-add-btn">+Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- ////////// main-center -->
+      <div class="main-content height-width-border-scroll">
+        <h1 class="box-headings">find your servings</h1>
+        <div class="main-items-box veg">
+          <div class="type-heading-box">
+            <img
+              class="type-logo"
+              src="./../pizza images/veg-logo.png"
+              alt="vegeterian pizza"
+            />
+            <h1 class="main-heading-veg">Veg Delight</h1>
+          </div>
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/veg/Four-Cheese.jpg"
+                alt="four cheese pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">four cheese pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$199</del> $100</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                An indulgent and creamy pizza featuring a blend of four
+                different cheeses mozzarella, cheddar, Parmesan, and blue cheese
+                creating a rich, complex, and mouthwatering experience for
+                cheese lovers.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/veg/Hawaiian.jpg"
+                alt="Hawaiian pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">Hawaiian pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$299</del> $199</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A unique and often debated pizza featuring a sweet and savory
+                mix of ham and pineapple, creating a delightful contrast of
+                flavors that challenge traditional pizza conventions.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/veg/Margherita.jpg"
+                alt="Margherita pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">Margherita pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+
+              <h3 class="card-item-price"><del>$299</del> $199</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A classic Italian pizza with a simple yet delicious combination
+                of fresh tomatoes, mozzarella cheese, and basil leaves,
+                representing the colors of the Italian flag and highlighting the
+                essence of traditional Italian cuisine.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/veg/Pepperoni.jpg"
+                alt="Pepperoni pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">Pepperoni pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$299</del> $199</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A widely popular American pizza topped with generous slices of
+                spicy pepperoni sausage, creating a flavorful and satisfying
+                experience with each bite, known for its signature crispy and
+                slightly greasy texture.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/veg/Supreme.jpg"
+                alt="Supreme pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">Supreme pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$299</del> $199</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A comprehensive and hearty pizza that combines a variety of
+                meats and vegetables, including pepperoni, sausage, onions, bell
+                peppers, and mushrooms, delivering a balanced and flavorful
+                feast.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/veg/Veggie.jpg"
+                alt="Veggie pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">Veggie pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$299</del> $199</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A colorful and health-conscious option topped with a variety of
+                fresh vegetables like bell peppers, onions, mushrooms, olives,
+                and sometimes tomatoes, offering a burst of freshness and
+                flavor.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+        </div>
+
+        <!-- ////////////////// -->
+        <div class="main-items-box veg">
+          <div class="type-heading-box">
+            <img
+              class="type-logo"
+              src="./../pizza images/non-veg-logo.png"
+              alt="vegeterian pizza"
+            />
+            <h1 class="main-heading-veg">Non-Veg Feast</h1>
+          </div>
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/non-veg/BBQ Chicken.jpg"
+                alt="BBQ Chicken pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">BBQ Chicken pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$199</del> $100</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A flavorful and hearty pizza topped with tender pieces of
+                chicken, tangy BBQ sauce, red onions, and cilantro, offering a
+                smoky and slightly sweet taste that’s perfect for barbecue
+                lovers.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images//non-veg/Buffalo Chicken.jpg"
+                alt="Buffalo Chicken pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">Buffalo Chicken pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$299</del> $199</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A spicy and tangy pizza topped with pieces of buffalo chicken,
+                often accompanied by blue cheese or ranch dressing, providing a
+                fiery kick and creamy coolness in each bite.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+          <!-- card start -->
+          <div class="pizza-card">
+            <div class="pizza-card-image-input">
+              <img
+                src="./../pizza images/non-veg/Meat-Lovers.jpg"
+                alt="Meat Lovers pizza"
+                class="pizza-card-image"
+              />
+              <select
+                type="text"
+                class="select-input-quantity"
+                aria-placeholder="select-quantity"
+              >
+                <option class="select-option" selected>
+                  -- Select Quantity --
+                </option>
+                <option class="select-option" value="1">1</option>
+                <option class="select-option" value="2">2</option>
+                <option class="select-option" value="3">3</option>
+                <option class="select-option" value="4">4</option>
+              </select>
+            </div>
+            <div class="card-data-details">
+              <div class="card-name-add-box">
+                <h2 class="card-item-name">Meat Lovers pizza</h2>
+                <button class="pizza-add-btn">+ Add</button>
+              </div>
+              <h3 class="card-item-price"><del>$299</del> $199</h3>
+              <h3 class="card-item-rating">rating: 5/5 ⭐⭐⭐⭐⭐</h3>
+              <p class="card-item-details">
+                A robust pizza designed for carnivores, loaded with a variety of
+                meats such as sausage, bacon, ham, and pepperoni, providing a
+                rich and satisfying taste in every slice.
+              </p>
+            </div>
+          </div>
+          <!-- card end -->
+        </div>
+      </div>
+      <!-- /////////////////// cart and track -->
+      <div class="cart-tack-box">
+        <div class="cart-box">
+          <h1 class="cart-track-heading">Cart</h1>
+          <div class="cart-card-box">
+            <div class="cart-card">
+              <div class="cart-card-image-name">
+                <img
+                  class="cart-card-image"
+                  src="./../pizza images/veg/Four-Cheese.jpg"
+                  alt=""
+                />
+                <h4 class="cart-card-name">Four Cheese Pizza</h4>
+              </div>
+              <div class="cart-card-extra-item">
+                <ul>
+                  <li>size : 8-inch</li>
+                  <li>Extra-cheese</li>
+                  <li>Extra-spicy</li>
+                </ul>
+              </div>
+              <div class="cart-card-btn-div">
+                <button class="cart-card-btn btn-order-now">Order Now</button>
+                <button class="cart-card-btn btn-cancel">Cancel</button>
+              </div>
+            </div>
+            <div class="cart-card">
+              <div class="cart-card-image-name">
+                <img
+                  class="cart-card-image"
+                  src="./../pizza images/veg/Hawaiian.jpg"
+                  alt=""
+                />
+                <h4 class="cart-card-name">Hawaiian Pizza</h4>
+              </div>
+              <div class="cart-card-extra-item">
+                <ul>
+                  <li>size : 8-inch</li>
+                  <li>Extra-cheese</li>
+                  <li>Extra-spicy</li>
+                </ul>
+              </div>
+              <div class="cart-card-btn-div">
+                <button class="cart-card-btn btn-order-now">Order Now</button>
+                <button class="cart-card-btn btn-cancel">Cancel</button>
+              </div>
+            </div>
+            <div class="cart-card">
+              <div class="cart-card-image-name">
+                <img
+                  class="cart-card-image"
+                  src="./../pizza images/veg/Margherita.jpg"
+                  alt=""
+                />
+                <h4 class="cart-card-name">Margherita Pizza</h4>
+              </div>
+              <div class="cart-card-extra-item">
+                <ul>
+                  <li>size : 8-inch</li>
+                  <li>Extra-cheese</li>
+                  <li>Extra-spicy</li>
+                </ul>
+              </div>
+              <div class="cart-card-btn-div">
+                <button class="cart-card-btn btn-order-now">Order Now</button>
+                <button class="cart-card-btn btn-cancel">Cancel</button>
+              </div>
+            </div>
+            <div class="cart-card">
+              <div class="cart-card-image-name">
+                <img
+                  class="cart-card-image"
+                  src="./../pizza images/veg/Pepperoni.jpg"
+                  alt=""
+                />
+                <h4 class="cart-card-name">Pepperoni Pizza</h4>
+              </div>
+              <div class="cart-card-extra-item">
+                <ul>
+                  <li>size : 8-inch</li>
+                  <li>Extra-cheese</li>
+                  <li>Extra-spicy</li>
+                </ul>
+              </div>
+              <div class="cart-card-btn-div">
+                <button class="cart-card-btn btn-order-now">Order Now</button>
+                <button class="cart-card-btn btn-cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-button-box">
+            <button class="cart-buy-all-btn cart-card-btn">Buy All</button>
+          </div>
+        </div>
+        <div class="track-box">
+          <h1 class="cart-track-heading">track orders</h1>
+          <div class="track-map-box"></div>
+          <div class="track-order-list">
+            <ul>
+              <li>Four-Cheese(2),Peporoni(1)</li>
+              <li>margarita(1)</li>
+              <li>Peporoni(1),Four-Cheese(2)</li>
+              <li>Four-Cheese(2),Peporoni(1)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container grid-5-col">
+        <div class="logo-col">
+          <a href="#" class="footer-logo-a">
+            <h1>Pizppy</h1>
+            <img
+              src="./../pizza images/pizza-Logo.png"
+              alt="rotating logo"
+              class="logo-rotate"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">
+            copyright &copy;: 2027 by Pizppy all rights reserved
+          </p>
+        </div>
+
+        <div class="address-colums">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              Address: shop.no:11, Panchavti Karanja , Nashik-422006
+            </p>
+
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a>
+            </p>
+
+            <p>
+              <a class="footer-link" href="mailto:hello@Pizppy.com"
+                >hello@Pizppy.com</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Pizppy</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Cooking partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#"> Create account</a></li>
+            <li><a class="footer-link" href="#"> sign in</a></li>
+            <li><a class="footer-link" href="#"> ios app</a></li>
+            <li><a class="footer-link" href="#"> Android app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#"> Recipe directory </a></li>
+            <li><a class="footer-link" href="#"> Help center </a></li>
+            <li><a class="footer-link" href="#"> Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

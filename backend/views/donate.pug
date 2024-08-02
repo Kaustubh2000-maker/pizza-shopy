@@ -1,0 +1,31 @@
+extends bace 
+block content 
+    .donate-container
+        h1.donate-form-heading Contribute Your Culinary Creations
+        form.donate-form
+            div
+                label.donate-label(for='') Enter Name
+                input#donate-name.donate-input(type='text')
+            div
+                label.donate-label(for='') Enter type veg or non-veg
+                input#donate-type.donate-input(type='text')
+            div
+                label.donate-label(for='') Enter country of origin
+                input#donate-country.donate-input(type='text')
+            div
+                label.donate-label(for='') Enter tastes
+                input#donate-taste.donate-input(type='text')
+            div
+                label.donate-label(for='') Enter sizes
+                input#donate-size.donate-input(type='text')
+            div
+                label.donate-label(for='') Enter summary
+                textarea#donate-summary.donate-input(type='text')
+            div
+                label.donate-label(for='') Enter description
+                textarea#donate-description.donate-input(type='text')
+            div
+                label.donate-label(for='') Enter procedure 
+                textarea#donate-procedure.donate-input(type='text')
+            button.donate-btn.donate-btn--clear clear
+            button.donate-btn.donate-btn--submit Submit

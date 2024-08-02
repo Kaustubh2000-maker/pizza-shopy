@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Margherita",
+    "summary": "A classic Italian pizza with a simple yet delicious combination of fresh tomatoes, mozzarella cheese, and basil leaves, representing the colors of the Italian flag and highlighting the essence of traditional Italian cuisine.",
+    "description": "The Margherita pizza is a timeless favorite that dates back to the late 1800s in Naples, Italy. It features a thin, crispy crust topped with fresh tomato sauce, slices of creamy mozzarella cheese, and fragrant basil leaves. This pizza is known for its light and fresh flavors, making it a popular choice for those who appreciate simplicity and quality ingredients.",
+    "discovery_year": 1889,
+    "country_of_origin": "Italy",
+    "totalRatings": 189,
+    "averageRatings": 4.2,
+    "isVegetarian": true,
+    "taste": ["Savory", "Fresh"],
+    "price": 199,
+    "sizeOptions": [6, 8, 10],
+    "photo": "Margherita.jpg"
+  },
+  {
+    "name": "Pepperoni",
+    "description": "The Pepperoni pizza is a classic and widely popular American favorite, known for its generous slices of spicy pepperoni sausage that create a flavorful and satisfying experience with each bite. This pizza is celebrated for its signature crispy and slightly greasy texture, making it a staple in pizzerias across the United States. Originating in 1919, the Pepperoni pizza has become synonymous with comfort food and is often the go-to choice for pizza lovers seeking a traditional yet indulgent meal. The combination of the savory tomato sauce, melted mozzarella cheese, and spicy pepperoni delivers a perfect balance of flavors that has stood the test of time.",
+    "summary": "A widely popular American pizza topped with generous slices of spicy pepperoni sausage, creating a flavorful and satisfying experience with each bite, known for its signature crispy and slightly greasy texture.",
+    "discovery_year": 1919,
+    "country_of_origin": "United States",
+    "totalRatings": 342,
+    "averageRatings": 4.5,
+    "isVegetarian": false,
+    "taste": ["Spicy", "Savory"],
+    "price": 599,
+    "sizeOptions": [8, 10],
+    "photo": "Pepperoni.jpg"
+  },
+  {
+    "name": "Hawaiian",
+    "summary": "A unique and often debated pizza featuring a sweet and savory mix of ham and pineapple, creating a delightful contrast of flavors that challenge traditional pizza conventions.",
+    "description": "Hawaiian pizza is known for its unconventional yet surprisingly delicious blend of flavors. The sweetness of pineapple chunks pairs perfectly with the savory, smoky flavor of ham, all atop a bed of gooey mozzarella and tomato sauce. This pizza is a favorite among those who enjoy a sweet and savory combination and don't mind breaking traditional pizza norms.",
+    "discovery_year": 1962,
+    "country_of_origin": "Canada",
+    "totalRatings": 246,
+    "averageRatings": 4.6,
+    "isVegetarian": false,
+    "taste": ["Sweet", "Savory"],
+    "price": 549,
+    "sizeOptions": [6, 10],
+    "photo": "Hawaiian.jpg"
+  },
+  {
+    "name": "BBQ Chicken",
+    "description": "BBQ Chicken pizza is a delicious twist on traditional pizza, featuring a tangy barbecue sauce base instead of the usual tomato sauce. The pizza is loaded with tender, grilled chicken pieces, thinly sliced red onions, and fresh cilantro, all smothered in melted mozzarella cheese. The smoky and sweet flavors of this pizza make it a hit among barbecue enthusiasts.",
+    "summary": "BBQ Chicken pizza features a tangy barbecue sauce, grilled chicken, red onions, cilantro, and mozzarella cheese. Originating from the US in 1985",
+    "discovery_year": 1985,
+    "country_of_origin": "United States",
+    "totalRatings": 498,
+    "averageRatings": 4.4,
+    "isVegetarian": false,
+    "taste": ["Smoky", "Sweet"],
+    "price": 599,
+    "photo": "BBQ-Chicken.jpg",
+    "sizeOptions": [6, 8]
+  },
+  {
+    "name": "Meat Lovers",
+    "description": "Meat Lovers pizza is the ultimate indulgence for those who crave a hearty and protein-packed meal. This pizza is piled high with a variety of meats, including spicy sausage, crispy bacon, savory ham, and classic pepperoni. The combination of these meats with melted cheese and tomato sauce creates a rich and savory flavor profile that satisfies even the biggest appetites.",
+    "summary": "Meat Lovers pizza is packed with sausage, bacon, ham, and pepperoni. Originating from the US in 1992",
+    "discovery_year": 1992,
+    "country_of_origin": "United States",
+    "totalRatings": 378,
+    "averageRatings": 4.3,
+    "isVegetarian": false,
+    "taste": ["Rich", "Savory"],
+    "price": 699,
+    "photo": "Meat-Lovers.jpg",
+
+    "sizeOptions": [8, 10]
+  },
+  {
+    "name": "Veggie",
+    "summary": "A colorful and health-conscious option topped with a variety of fresh vegetables like bell peppers, onions, mushrooms, olives, and sometimes tomatoes, offering a burst of freshness and flavor.",
+    "description": "Veggie pizza is a vibrant and healthy option that is perfect for those looking to enjoy a lighter meal without sacrificing flavor. This pizza is topped with an assortment of fresh vegetables, including crunchy bell peppers, sweet onions, earthy mushrooms, and tangy olives. The colorful array of toppings not only looks appealing but also provides a refreshing burst of flavors with each bite.",
+    "discovery_year": 1980,
+    "country_of_origin": "United States",
+    "totalRatings": 532,
+    "averageRatings": 4.7,
+    "isVegetarian": true,
+    "taste": ["Fresh", "Light"],
+    "price": 199,
+    "photo": "Veggie.jpg",
+
+    "sizeOptions": [6, 8, 10]
+  },
+  {
+    "name": "Four Cheese",
+    "summary": "An indulgent and creamy pizza featuring a blend of four different cheeses—mozzarella, cheddar, Parmesan, and blue cheese—creating a rich, complex, and mouthwatering experience for cheese lovers.",
+    "description": "Four Cheese pizza is a dream come true for cheese aficionados. This luxurious pizza is topped with a blend of four different cheeses: creamy mozzarella, sharp cheddar, nutty Parmesan, and tangy blue cheese. The combination of these cheeses creates a rich and complex flavor that is both satisfying and indulgent, making it a favorite among those who can't get enough cheese.",
+    "discovery_year": 1990,
+    "country_of_origin": "Italy",
+    "totalRatings": 275,
+    "averageRatings": 4.9,
+    "isVegetarian": true,
+    "taste": ["Rich", "Creamy"],
+    "price": 249,
+    "photo": "Four-Cheese.jpg",
+
+    "sizeOptions": [6, 8, 10]
+  },
+  {
+    "name": "Supreme",
+    "description": "The Supreme pizza is a comprehensive and hearty option that combines a variety of meats and vegetables, delivering a balanced and flavorful feast in every bite. This pizza features a rich tomato sauce base topped with pepperoni, sausage, onions, bell peppers, and mushrooms, creating a symphony of flavors that appeals to a wide range of tastes. Originating in the United States in 1970, the Supreme pizza has become a popular choice for those who enjoy a mix of different textures and tastes on their pizza. The inclusion of both meat and vegetable toppings provides a satisfying contrast",
+    "summary": "A comprehensive and hearty pizza that combines a variety of meats and vegetables, including pepperoni, sausage, onions, bell peppers, and mushrooms, delivering a balanced and flavorful feast.",
+    "discovery_year": 1970,
+    "country_of_origin": "United States",
+    "totalRatings": 423,
+    "averageRatings": 4.1,
+    "isVegetarian": false,
+    "taste": ["Balanced"],
+    "price": 599,
+    "photo": "Supreme.jpg",
+
+    "sizeOptions": [6, 8, 10]
+  },
+  {
+    "name": "Buffalo Chicken",
+    "summary": "A spicy and tangy pizza topped with pieces of buffalo chicken, often accompanied by blue cheese or ranch dressing, providing a fiery kick and creamy coolness in each bite.",
+    "description": "Buffalo Chicken pizza is perfect for those who love a bit of heat. This pizza features spicy buffalo sauce-coated chicken pieces, adding a fiery kick to each bite. It's often complemented with a drizzle of cool blue cheese or ranch dressing, which balances the heat and adds a creamy element to the pizza. This combination of spicy and creamy makes Buffalo Chicken pizza a bold and flavorful choice.",
+    "discovery_year": 1994,
+    "country_of_origin": "United States",
+    "totalRatings": 324,
+    "averageRatings": 4.1,
+    "isVegetarian": false,
+    "taste": ["Spicy", "Tangy"],
+    "price": 649,
+    "photo": "Buffalo-Chicken.jpg",
+
+    "sizeOptions": [6, 8, 10]
+  },
+  {
+    "name": "Vegetarian",
+    "summary": "A wholesome pizza loaded with various vegetables like bell peppers, onions, tomatoes, olives, and mushrooms, offering a burst of flavors and textures for vegetarians and veggie lovers.",
+    "description": "Vegetarian pizza is a delight for those who prefer a plant-based diet. It features a colorful array of vegetables, including crunchy bell peppers, zesty onions, juicy tomatoes, tangy olives, and earthy mushrooms. This pizza is perfect for vegetarians and anyone looking to enjoy a fresh and flavorful combination of veggies on a delicious crust with melted cheese.",
+    "discovery_year": 1982,
+    "country_of_origin": "Italy",
+    "totalRatings": 532,
+    "averageRatings": 4.7,
+    "isVegetarian": true,
+    "taste": ["Fresh", "Flavorful"],
+    "price": 199,
+    "photo": "Vegeterian.jpg",
+    "sizeOptions": [6, 8, 10]
+  },
+  {
+    "name": "Seafood Delight",
+    "description": "Seafood Delight pizza is a fresh and flavorful option for seafood lovers, featuring a variety of seafood toppings on a crisp crust. The combination of fresh ingredients and savory flavors creates a unique pizza experience.",
+    "discovery_year": 1998,
+    "country_of_origin": "Italy",
+    "totalRatings": 453,
+    "averageRatings": 4.3,
+    "isVegetarian": false,
+    "taste": ["Seafood", "Fresh"],
+    "price": 699,
+    "sizeOptions": [6, 10],
+    "photo": "SeaFood-Delight.jpg",
+
+    "summary": "Seafood Delight pizza, from Italy (1998), features fresh seafood toppings on a crisp crust. It has 453 ratings with an average of 4.3 stars. Available in 6 and 10-inch sizes."
+  },
+  {
+    "name": "Mushroom Lovers",
+    "summary": "A mushroom-packed pizza featuring a variety of mushrooms such as button, shiitake, and portobello, offering an earthy and umami-rich experience for mushroom enthusiasts.",
+    "description": "Mushroom Lovers pizza is a paradise for mushroom aficionados. It's loaded with a variety of mushrooms, including the delicate button mushrooms, flavorful shiitake mushrooms, and meaty portobello mushrooms. The combination of these mushrooms creates an earthy and umami-rich experience that is both satisfying and delicious. This pizza is a must-try for anyone who loves the savory goodness of mushrooms.",
+    "discovery_year": 1978,
+    "country_of_origin": "United States",
+    "totalRatings": 342,
+    "averageRatings": 4.5,
+    "isVegetarian": true,
+    "taste": ["Umami", "Earthy"],
+    "price": 199,
+    "photo": "Mushroom.jpg",
+
+    "sizeOptions": [6, 8]
+  },
+  {
+    "name": "Pesto Delight",
+    "summary": "A pesto-infused pizza featuring a blend of basil pesto, sun-dried tomatoes, grilled chicken, and a sprinkle of pine nuts, offering a burst of Mediterranean flavors in every bite.",
+    "description": "Pesto Delight pizza is a celebration of Mediterranean flavors. It's topped with a generous spread of basil pesto, tangy sun-dried tomatoes, tender grilled chicken pieces, and a sprinkle of crunchy pine nuts. The combination of these ingredients creates a burst of savory and aromatic flavors that transport you to the sun-drenched coasts of the Mediterranean with every bite.",
+    "discovery_year": 2005,
+    "country_of_origin": "Italy",
+    "totalRatings": 498,
+    "averageRatings": 4.4,
+    "isVegetarian": true,
+    "taste": ["Mediterranean", "Savory"],
+    "photo": "Pesto-delight.jpg",
+
+    "price": 249,
+    "sizeOptions": [8, 10]
+  }
+]

@@ -1,0 +1,83 @@
+.signin-page {
+  height: 100vh;
+  width: 100vw;
+  //   background-color: skyblue;
+  position: relative;
+  color: #333;
+
+  //   background: linear-gradient(-45deg, #ffa855, #ffe9d5, #ffa855);
+  //   background-size: 400% 400%;
+  //   background-position: 0% 0%;
+  //   animation: data-bg 10s infinite ease-in;
+
+  background-color: #efefef;
+}
+.signin-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 60rem;
+  width: 70rem;
+  //   background-color: blue;
+  border-radius: 20px;
+  padding: 5rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+}
+.signin-heading {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.signin-form {
+  //   background-color: yellow;
+  padding: 5rem;
+  display: grid;
+}
+.signin-label {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+.signin-input {
+  height: 4rem;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+
+  border: 1px solid #ffc995;
+  color: #333;
+
+  text-indent: 3rem;
+  border-radius: 20px;
+
+  box-shadow: 0px 0px 3px inset #ffc995;
+}
+
+.signin-input::placeholder {
+  color: #b3b3b3;
+  letter-spacing: 1px;
+}
+
+.signin-input--password {
+  letter-spacing: 0.6rem;
+  font-size: 1.6rem;
+}
+
+.signin-input:focus {
+  outline: none;
+}
+.signin-submit-btn {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  justify-self: end;
+  margin-right: 1rem;
+  border-radius: 20px;
+
+  background-color: #ff922b;
+  color: #f2f2f2;
+  text-transform: capitalize;
+  border: 1px solid rgb(227, 227, 227);
+}

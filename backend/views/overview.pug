@@ -1,0 +1,155 @@
+extends bace 
+
+
+mixin beveragesCard(photo,name)
+    .beverages-card
+        img.beverages-image(src=`/pizza images/beverages/${photo}` alt=`${name}`)
+        h4.beverages-name #{name}
+        button.beverages-add-btn +Add
+
+
+mixin pizzaCard(pizza)
+    .pizza-card
+        .pizza-card-image-input
+            a(href=`/${pizza.slug}`) 
+                img.pizza-card-image(src=`/pizza images/pizza-photoes/${pizza.photo}` alt=`${pizza.name}`)
+            select.select-input-quantity(type='text' aria-placeholder='select-quantity')
+                option.select-option(selected='')
+                    | -- Select Quantity --
+                option.select-option(value='1') 1
+                option.select-option(value='2') 2
+                option.select-option(value='3') 3
+                option.select-option(value='4') 4
+        .card-data-details
+            .card-name-add-box
+                h2.card-item-name #{pizza.name} 
+                    span 
+                        a(href=`/${pizza.slug}` class="pizza-info-link")
+                           ion-icon(class="pizza-info-link-icon" name="information-circle-outline")
+                button.pizza-add-btn + Add
+            h3.card-item-price
+                del #{pizza.price}
+                |  #{pizza.price + 50 + ' /-'}
+            h3.card-item-rating rating: 5/5 &#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;
+            p.card-item-details=pizza.summary
+
+
+mixin cartCard
+    .cart-card
+        .cart-card-image-name
+            img.cart-card-image(src='./../pizza images/veg/Four-Cheese.jpg' alt='')
+            h4.cart-card-name Four Cheese Pizza
+        .cart-card-extra-item
+            ul
+                li size : 8-inch
+                li Extra-cheese
+                li Extra-spicy
+        .cart-card-btn-div
+            button.cart-card-btn.btn-order-now Order Now
+            button.cart-card-btn.btn-cancel Cancel
+
+
+
+block content 
+    main.grid-3-col.main-grid
+        .beverages-box.height-width-border-scroll
+            h1.box-headings Beverages
+            .beverages-container
+
+                each beverage in beverages
+                    +beveragesCard(beverage.photo,beverage.name)
+                    
+                      
+        // ////////// main-center
+        .main-content.height-width-border-scroll
+            h1.box-headings find your servings
+            .main-items-box.veg
+                .type-heading-box
+                    img.type-logo(src='./../pizza images/veg-logo.png' alt='vegeterian pizza')
+                    h1.main-heading-veg Veg Delight
+                // card start
+                each pizza in pizzas
+                    if (pizza.isVegetarian)
+                        +pizzaCard(pizza)
+                       
+
+                              
+                // card end
+                // //////////////////
+            .main-items-box.veg
+                    .type-heading-box
+                        img.type-logo(src='./../pizza images/non-veg-logo.png' alt='vegeterian pizza')
+                        h1.main-heading-veg Non-Veg Feast
+                    // card start
+                    each pizza in pizzas
+                        if (!pizza.isVegetarian)
+                            +pizzaCard(pizza)
+                   
+                   
+        .cart-tack-box
+            .cart-box
+                h1.cart-track-heading Cart
+                .cart-card-box 
+                    +cartCard()
+                    .cart-card
+                        .cart-card-image-name
+                            img.cart-card-image(src='./../pizza images/veg/Four-Cheese.jpg' alt='')
+                            h4.cart-card-name Four Cheese Pizza
+                        .cart-card-extra-item
+                            ul
+                                li size : 8-inch
+                                li Extra-cheese
+                                li Extra-spicy
+                        .cart-card-btn-div
+                            button.cart-card-btn.btn-order-now Order Now
+                            button.cart-card-btn.btn-cancel Cancel
+                    .cart-card
+                        .cart-card-image-name
+                            img.cart-card-image(src='./../pizza images/veg/Hawaiian.jpg' alt='')
+                            h4.cart-card-name Hawaiian Pizza
+                        .cart-card-extra-item
+                            ul
+                                li size : 8-inch
+                                li Extra-cheese
+                                li Extra-spicy
+                        .cart-card-btn-div
+                            button.cart-card-btn.btn-order-now Order Now
+                            button.cart-card-btn.btn-cancel Cancel
+                    .cart-card
+                        .cart-card-image-name
+                            img.cart-card-image(src='./../pizza images/veg/Margherita.jpg' alt='')
+                            h4.cart-card-name Margherita Pizza
+                        .cart-card-extra-item
+                            ul
+                                li size : 8-inch
+                                li Extra-cheese
+                                li Extra-spicy
+                        .cart-card-btn-div
+                            button.cart-card-btn.btn-order-now Order Now
+                            button.cart-card-btn.btn-cancel Cancel
+                    .cart-card
+                        .cart-card-image-name
+                            img.cart-card-image(src='./../pizza images/veg/Pepperoni.jpg' alt='')
+                            h4.cart-card-name Pepperoni Pizza
+                        .cart-card-extra-item
+                            ul
+                                li size : 8-inch
+                                li Extra-cheese
+                                li Extra-spicy
+                        .cart-card-btn-div
+                            button.cart-card-btn.btn-order-now Order Now
+                            button.cart-card-btn.btn-cancel Cancel
+
+
+
+                .cart-button-box
+                    button.cart-buy-all-btn.cart-card-btn Buy All
+            //- .track-box
+            //-     h1.cart-track-heading track orders
+            //-     .track-map-box
+            //-     .track-order-list
+            //-         ul
+            //-             li Four-Cheese(2),Peporoni(1)
+            //-             li margarita(1)
+            //-             li Peporoni(1),Four-Cheese(2)
+            //-             li Four-Cheese(2),Peporoni(1)

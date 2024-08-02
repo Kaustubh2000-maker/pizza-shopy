@@ -1,0 +1,139 @@
+$nav-decoration-color: #e68327;
+
+header {
+  color: #444;
+}
+
+.Header-bar {
+  padding: 2rem 3rem;
+  // border-bottom: 1px solid black;
+  // margin-bottom: 0.5rem;
+  // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  background-color: #e68327;
+}
+.nav-bar {
+  width: 100%;
+  height: 4rem;
+  grid-template-columns: repeat(10, 1fr);
+}
+.nav-logo-box {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-logo {
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  font-weight: 900;
+  transform: skewX(-15deg);
+  color: #fff4ea;
+}
+.logo-rotate {
+  width: 3rem;
+  height: 3rem;
+
+  animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.nav-search-bar-div {
+  grid-column: 3/8;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+.nav-search-bar-pizza-logo {
+  height: 2rem;
+  width: 2rem;
+
+  border-radius: 20px 0px 0px 20px;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  background-color: #fff;
+}
+.nav-search-bar {
+  width: 95%;
+  height: 3rem;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444;
+  padding: 1rem 3rem 1rem 3rem;
+}
+.nav-search-bar:focus {
+  outline: none;
+}
+.nav-search-bar::placeholder {
+  color: #999;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.nav-btn-div {
+  grid-column: 8/11;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+.nav-btn {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  color: #fff4ea;
+  border-radius: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.3s linear;
+  letter-spacing: 0.5px;
+}
+
+.nav-btn:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.btn-log-in {
+  background-color: #fff4ea;
+  color: $nav-decoration-color;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-log-in:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.btn-sign-in {
+}
+.btn-donate {
+}
+.btn-help {
+}
+.order-bar {
+  grid-column: 1/-1;
+  height: 2rem;
+  color: #fff4ea;
+  font-weight: 700;
+  text-transform: capitalize;
+  background-color: rgb(255, 61, 61);
+  margin-bottom: 3.2rem;
+}
+.order-bar ul {
+  display: flex;
+  gap: 4rem;
+}
+.order-bar ul li {
+  margin: 0 2rem;
+  list-style: decimal;
+  text-indent: 1rem;
+  letter-spacing: 0.2rem;
+}

@@ -1,0 +1,87 @@
+.donate-container {
+  width: 90%;
+
+  background-color: red;
+  background-color: rgb(243, 243, 243);
+  margin: 0 auto;
+}
+.donate-form-heading {
+  text-align: center;
+  padding: 8rem 3rem 3rem 3rem;
+  margin-bottom: 5rem;
+
+  font-size: 3.6rem;
+}
+.donate-form {
+  padding: 12.4rem;
+  padding-top: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.donate-form div {
+  display: grid;
+
+  gap: 1rem;
+}
+.donate-label {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.donate-input {
+  font-size: 1.6rem;
+  border-radius: 5px;
+  height: 3.2rem;
+  text-indent: 3rem;
+  color: #333;
+}
+.donate-form div:nth-child(6) {
+  grid-column: 1/2;
+}
+.donate-form div:nth-child(6) textarea {
+  height: 10rem;
+}
+
+.donate-form div:nth-child(7) {
+  grid-column: 2/-1;
+}
+.donate-form div:nth-child(7) textarea {
+  height: 10rem;
+}
+
+.donate-form div:nth-child(8) {
+  grid-column: 1/-1;
+  margin-bottom: 5rem;
+}
+.donate-form div:nth-child(8) textarea {
+  height: 20rem;
+  text-align: left;
+}
+
+.donate-btn {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+}
+
+.donate-btn--clear {
+  grid-column: 1/2;
+  justify-self: right;
+  border: 1px solid #777;
+  color: #333;
+  background-color: #fffaf5;
+}
+
+.donate-btn--submit {
+  grid-column: 2/-1;
+  border: 1px solid #fff4ea;
+  background-color: #ff922b;
+  color: #fff4ea;
+  justify-self: left;
+}

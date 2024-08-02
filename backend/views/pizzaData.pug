@@ -1,0 +1,67 @@
+extends bace 
+
+//- mixin dataDetail(icon,type,value)
+//-     - if(value=== true) value = 'yes'
+//-     //- - console.log(value.length)
+//-     p.data-detail-type
+//-         ion-icon.data-detail-icon(name=`${icon}`)
+//-         =`${type}`
+//-         span.data-detail-type-value=`${value}`
+
+mixin dataDetail(icon, type, value)
+
+    - if(typeof value === 'boolean') 
+        - if(value === true) value = 'yes'
+        - else value = 'no'
+
+        
+
+    - if (Array.isArray(value)) 
+        - if (typeof(value[1])==='string')
+             p.data-detail-type
+                ion-icon.data-detail-icon(name=icon)
+                =type
+                span.data-detail-type-value=`${value[0]} and ${value[1]}`
+                - return
+    - if (Array.isArray(value)) 
+        - if (typeof(value[1])==='number')
+            p.data-detail-type
+                ion-icon.data-detail-icon(name=icon)
+                =type
+                -const val2 = value.length === 2 ? `${value[0]} and ${value[1]} inches`:`${value[0]}, ${value[1]} and ${value[2]} inches`
+                span.data-detail-type-value=`${val2}`
+                - return
+
+
+  
+
+    p.data-detail-type
+        ion-icon.data-detail-icon(name=icon)
+        =type
+        span.data-detail-type-value=value
+
+
+
+
+block content
+    .data-body-container
+        .data_body
+            figure.data-img-box
+                img.data-img(src=`/pizza images/pizza-photoes/${pizza.photo}` alt=`${pizza.name}`)
+            h1.data-pizza-heading=`${pizza.name} Pizza`
+            .data-description-box
+                p.data-description #{pizza.description}
+            .data-details-box
+                //- - console.log(typeof(pizza.taste))
+                //- - console.log(pizza.taste)
+                //- - console.log(Array.isArray(pizza.taste))
+
+
+                +dataDetail('calendar','discovery year :',pizza.discovery_year)
+                +dataDetail('earth','  country of origin :',pizza.country_of_origin)
+                +dataDetail('chatbubbles',' totalRatings :',pizza.totalRatings)
+                +dataDetail('chatbubble-ellipses','average Ratings :',pizza.averageRatings)
+                +dataDetail('nutrition',' Vegetarian :',pizza.isVegetarian)
+                +dataDetail('pizza','taste :',pizza.taste)
+                +dataDetail('cash','price :', `${pizza.price}/- `)
+                +dataDetail('resize','sizeOptions :',pizza.sizeOptions)

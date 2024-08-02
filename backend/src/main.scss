@@ -1,0 +1,129 @@
+@import "generals";
+@import "header";
+@import "testimonialAndOffer";
+@import "beverages";
+@import "center";
+@import "cartAndTrack";
+@import "footer";
+@import "data-page";
+// other pages
+@import "login";
+@import "signin";
+@import "account";
+@import "donate";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  border: rebeccapurple;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+.main-grid {
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 2rem;
+  margin: 8.4rem 3.2rem;
+}
+body {
+  // background-color: rgb(226, 226, 226);
+}
+.footer-heading,
+.nav-col ul li a {
+  word-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+a {
+  cursor: pointer;
+}
+
+textarea {
+  font-family: sans-serif;
+  padding: 2rem;
+  text-indent: 0 !important;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+input {
+  border: 1px solid #777;
+}
+/*
+ main colour: #ff922b
+
+Darks Shades:
+#ff922b   	
+#e68327   	Nav-logo-h1 color , btn background
+#cc7522   	
+#b3661e   	
+#99581a   	
+#804916   	
+#663a11   	
+#4c2c0d   	dark color
+#331d09   	
+#190f04   	
+#000000   
+
+light Shades:
+
+#ff922b	
+#ff9d40	
+#ffa855	 icon-color
+#ffb36b	 
+#ffbe80	
+#ffc995	login order
+#ffd3aa	
+#ffdebf	
+#ffe9d5	
+#fff4ea	 login btn text , also for white text , testimonial backgroind
+#ffffff
+
+  color: rgb(105, 105, 255);  blues used 
+
+
+Grey-Shades
+#333 for text 
+#444 for headings
+#999 testimonial blockquote
+
+/*
+  --- 01 typography
+  -FONT SIZE SYSTEM (px)
+  
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  
+  
+  --font weight:
+  default 400
+  medium 500
+  semibold 600
+  bold 700
+
+
+  --line weight:
+  default :1
+  1.05 heading
+  1.6 paragraph
+  
+  --letter spacing
+  -0.5px
+  1.2px
+
+  --border-radiuns 
+  10px 10px
+
+  --whitespace
+    --SPACING SYSTEM (px)
+  
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
