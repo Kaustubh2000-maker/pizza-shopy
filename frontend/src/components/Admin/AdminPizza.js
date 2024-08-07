@@ -7,6 +7,8 @@ import PizzaList from "./PizzaList";
 import EditPizzaForm from "./EditPizzaForm";
 
 function AdminPizza() {
+  console.log("");
+
   const { pizzas: initialPizzas, loading, error } = useContext(DataContext);
   const [pizzas, setPizzas] = useState([]); // Start with an empty array
   const [selectedPizza, setSelectedPizza] = useState(null);
