@@ -883,7 +883,7 @@ del {
 }
 .data_body {
   width: 100rem;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(245, 245, 245);
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
@@ -1121,7 +1121,7 @@ del {
 .donate-container {
   width: 90%;
   background-color: red;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(245, 245, 245);
   margin: 0 auto;
 }
 
@@ -1315,8 +1315,8 @@ html::-webkit-scrollbar {
   grid-template-columns: 1fr 3fr;
 
   height: 100rem; */
-  padding: 8rem 12rem;
-  background-color: rgb(248, 248, 248);
+  padding: 6rem 12rem;
+  background-color: rgb(245, 245, 245);
 }
 .account-page-box {
   display: grid;
@@ -1389,7 +1389,7 @@ html::-webkit-scrollbar {
   height: 4rem;
   width: 100%;
   border: none;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(245, 245, 245);
   text-indent: 3rem;
   color: #444;
 
@@ -1489,8 +1489,8 @@ html::-webkit-scrollbar {
 
 /* ////////////////////////////////////////////////////////// */
 .order-page {
-  padding: 8rem 12rem;
-  background-color: rgb(248, 248, 248);
+  padding: 6rem 12rem;
+  background-color: rgb(245, 245, 245);
 }
 .order-container {
   height: 88rem;
@@ -1618,6 +1618,189 @@ html::-webkit-scrollbar {
   font-weight: 500;
 }
 
+/* //////////////////////////////////////////////////////////////////// */
+.admin-pizza-page {
+  padding: 6rem 12rem;
+  background-color: rgb(245, 245, 245);
+}
+.admin-pizza-page-heading {
+  text-align: center;
+  padding-top: 3.2rem;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  /* word-spacing: 5px; */
+  color: #444;
+
+  background: linear-gradient(to right, #ffbe80, #ff922b);
+  background-clip: text;
+  color: transparent;
+}
+.admin-pizza-container {
+  height: 125rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.admin-pizza-card-box-edit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 7.2rem;
+  gap: 2rem;
+  height: 78rem;
+}
+
+.admin-pizza-card-box-and-heading {
+  padding: 2rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+}
+.admin-pizza-card-box-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.admin-pizza-card-box {
+  height: 100%;
+  overflow: scroll;
+}
+
+.admin-pizza-card-box::-webkit-scrollbar {
+  display: none;
+}
+.admin-pizza-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.admin-pizza-card {
+  background-color: #fff;
+  height: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 10px;
+}
+
+.admin-pizza-card-img-name {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.admin-pizza-card-img {
+  border-radius: 10px;
+  width: 4rem;
+  height: 4rem;
+}
+.admin-pizza-card-name {
+}
+.admin-pizza-card-btns {
+  display: flex;
+  justify-content: space-around;
+}
+.admin-pizza-card-btn {
+  background: none;
+  border: none;
+}
+#admin-pizza-icon {
+  font-size: 2rem;
+  padding-right: 1rem;
+
+  color: #777;
+}
+/* /////////////////////////////////////////////////////////////////// */
+
+.account-pizza-edit-box {
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.account-pizza-edits {
+}
+
+.account-pizza-edits-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.account-form-innerbox {
+  display: flex;
+  align-items: flex-start;
+
+  /* gap: 1rem; */
+}
+.account-label-div {
+  /* background-color: red; */
+  width: 12rem;
+  padding: 0.5rem;
+}
+
+.account-pizza-edit-form-label {
+  display: block;
+  text-transform: capitalize;
+  width: 12rem;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.account-pizza-edit-input {
+  text-indent: 1rem;
+  height: 3rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  border: none;
+}
+
+.account-pizza-edit-input:focus {
+  outline: none;
+  cursor: 10px solid black;
+}
+.account-pizza-edit-input[type="checkbox"] {
+  width: 2rem;
+  border: none;
+  outline: none;
+
+  /* appearance: none;   */
+  /* -webkit-appearance: none; */
+  -moz-appearance: none;
+  background-color: white; /* Set your desired background color */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+.account-pizza-edit-textarea {
+  padding: 1rem;
+  width: 100%;
+  padding: 1rem;
+  height: 10rem;
+  border-radius: 10px;
+  border: none;
+}
+.account-pizza-edit-textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.account-pizza-edit-btn {
+  padding: 0.7rem 1.4rem;
+
+  border-radius: 10px;
+
+  background-color: #ff922b;
+
+  color: #ffe6e6;
+  justify-self: center;
+  border: 1px solid #ffe6e6;
+
+  font-weight: 700;
+  margin: 2rem;
+  margin-left: auto;
+}
 /* //////////////////////////////////////////////////////////////////// */
 a {
   cursor: pointer;
