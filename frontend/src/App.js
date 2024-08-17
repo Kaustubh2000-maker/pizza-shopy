@@ -11,7 +11,7 @@ import PizzaDetails from "./components/PizzaDetails";
 import Login from "./components/Login";
 import Donate from "./components/Donate";
 import Signin from "./components/Signin";
-import Alert from "./components/Alert"; // Import the Alert component
+import Alert from "./components/Alert";
 import Account from "./components/Account";
 import AdminPizza from "./components/Admin/AdminPizza";
 

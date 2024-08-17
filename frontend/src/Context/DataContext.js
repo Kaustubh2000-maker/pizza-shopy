@@ -1,48 +1,49 @@
 // src/contexts/DataContext.js
 import React, { createContext, useState, useEffect } from "react";
 
-export const DataContext = createContext();
+const DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
-  const [data, setData] = useState({
-    pizzas: [],
-    beverages: [],
-    loading: true,
-    error: null,
-  });
+const DataProvider = ({ children }) => {
+  const [pizzas, setpizzas] = useState([]);
+  const [beverages, setbeverages] = useState([]);
+  const [loading, setloading] = useState(true);
+  const [error, seterror] = useState(null);
+
+  const fetchData = async () => {
+    try {
+      const [pizzasResponse, beveragesResponse] = await Promise.all([
+        fetch("http://127.0.0.1:8000/api/v1/pizzas"),
+        fetch("http://127.0.0.1:8000/api/v1/beverages"),
+      ]);
+
+      const pizzasData = await pizzasResponse.json();
+      const beveragesData = await beveragesResponse.json();
+
+      // console.log(pizzasData.data.doc);
+
+      setpizzas(pizzasData.data.doc);
+      setbeverages(beveragesData.data.doc);
+      setloading(false);
+      seterror(null);
+    } catch (error) {
+      setpizzas([]);
+      setbeverages([]);
+      setloading(false);
+      seterror(error.message);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [pizzasResponse, beveragesResponse] = await Promise.all([
-          fetch("http://127.0.0.1:8000/api/v1/pizzas"),
-          fetch("http://127.0.0.1:8000/api/v1/beverages"),
-        ]);
-
-        const pizzasData = await pizzasResponse.json();
-        const beveragesData = await beveragesResponse.json();
-
-        const pizzas = pizzasData.data.doc;
-        const beverages = beveragesData.data.doc;
-
-        setData({
-          pizzas: pizzas,
-          beverages: beverages,
-          loading: false,
-          error: null,
-        });
-      } catch (error) {
-        setData({
-          pizzas: [],
-          beverages: [],
-          loading: false,
-          error: error.message,
-        });
-      }
-    };
-
     fetchData();
   }, []);
 
-  return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
+  return (
+    <DataContext.Provider
+      value={{ pizzas, beverages, loading, error, fetchData }}
+    >
+      {children}
+    </DataContext.Provider>
+  );
 };
+
+export { DataContext, DataProvider };

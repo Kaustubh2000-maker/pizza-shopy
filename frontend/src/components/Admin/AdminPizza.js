@@ -1,15 +1,26 @@
 import React, { useContext, useState, useEffect } from "react";
-import { DataContext } from "../../Context/DataContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+import { DataContext } from "../../Context/DataContext";
+import { AuthContext } from "./../../Context/AuthContext";
+
 import PizzaList from "./PizzaList";
 import EditPizzaForm from "./EditPizzaForm";
+import AdminAddPizza from "./AdminAddPizza";
 
 function AdminPizza() {
-  console.log("");
+  const { showAlert } = useContext(AuthContext);
+  const {
+    pizzas: initialPizzas,
+    loading,
+    error,
+    fetchData,
+  } = useContext(DataContext);
 
-  const { pizzas: initialPizzas, loading, error } = useContext(DataContext);
+  useEffect(() => {
+    fetchData();
+  }, []);
   const [pizzas, setPizzas] = useState([]); // Start with an empty array
   const [selectedPizza, setSelectedPizza] = useState(null);
   const [newPizza, setNewPizza] = useState({ name: "", photo: "" });
@@ -55,6 +66,8 @@ function AdminPizza() {
           pizza._id === editPizza._id ? { ...pizza, ...response.data } : pizza
         )
       );
+
+      showAlert(`${editPizza.name} updated successfully`);
     } catch (error) {
       console.error("Error updating pizza:", error);
     }
@@ -63,7 +76,9 @@ function AdminPizza() {
   const handleDeletePizza = async (id) => {
     try {
       await axios.delete(`http://127.0.0.1:8000/api/v1/pizzas/${id}`);
+
       setPizzas(pizzas.filter((pizza) => pizza._id !== id));
+      showAlert(`Deleted successfully`);
       if (editPizza && editPizza._id === id) {
         setEditPizza(null);
       }
@@ -102,6 +117,11 @@ function AdminPizza() {
               />
             )}
           </div>
+        </div>
+        <div className="pizza-add-div">
+          <h1 className="admin-pizza-page-heading">Add new Pizzas</h1>
+
+          <AdminAddPizza></AdminAddPizza>
         </div>
       </div>
     </div>

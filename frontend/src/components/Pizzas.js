@@ -1,10 +1,14 @@
 // src/components/Pizzas.js
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { DataContext } from "./../Context/DataContext";
 import PizzaCard from "./PizzaCard";
 
 const Pizzas = (user) => {
-  const { pizzas, loading, error } = useContext(DataContext);
+  const { pizzas, loading, error, fetchData } = useContext(DataContext);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;

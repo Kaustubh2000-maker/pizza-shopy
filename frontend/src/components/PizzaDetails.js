@@ -7,6 +7,7 @@ const PizzaDetails = () => {
   const { slug } = useParams();
   const { pizzas } = useContext(DataContext);
   const pizza = pizzas.find((p) => p.slug === slug);
+  console.log(pizzas);
 
   if (!pizza) {
     return <p>Pizza not found</p>;
