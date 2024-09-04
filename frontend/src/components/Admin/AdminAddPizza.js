@@ -21,6 +21,7 @@ function AdminAddPizza() {
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("handlesubmit");
 
     // Create a FormData object to handle file uploads
     const formData = new FormData();
