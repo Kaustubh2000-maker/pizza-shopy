@@ -94,12 +94,17 @@ const Cart = (props) => {
       console.log(orderItems);
       console.log(finalPrice);
 
-      const response = await axios.post(`http://127.0.0.1:8000/api/v1/orders`, {
-        userId: props.user._id,
-        cartItems: orderItems,
-        finalPrice: finalPrice,
-        paymentCompleted: false, // Assuming payment is not completed immediately
-      });
+      const response = await axios.post(
+        `http://127.0.0.1:8000/api/v1/orders/save-order`,
+        {
+          userId: props.user._id,
+          cartItems: orderItems,
+          finalPrice: finalPrice,
+          paymentCompleted: false, // Assuming payment is not completed immediately
+        }
+      );
+
+      console.log(response);
 
       if (response.status === 201) {
         showAlert("Order placed successfully!");

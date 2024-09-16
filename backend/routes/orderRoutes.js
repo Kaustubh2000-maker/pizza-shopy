@@ -7,7 +7,9 @@ const mongoose = require("mongoose");
 
 const router = express.Router();
 
-router.route("/").post(orderControllar.createOrder, userController.deleteCart);
+router
+  .route("/save-order")
+  .post(orderControllar.createOrder, userController.deleteCart);
 
 router.get("/getAllOrdersByUserId/:userId", orderControllar.getOrdersByUserId);
 
