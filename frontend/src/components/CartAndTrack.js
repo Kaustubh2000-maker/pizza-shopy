@@ -5,6 +5,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
+import { loadStripe } from "@stripe/stripe-js"; // Stripe library for client-side checkout
+
+const stripePromise = loadStripe(
+  "pk_test_51Pbx7HEYfpKViFpO0GAJOw5Lm3F6WnRb43T8L5eLOurg1Flshjb1uNb9ZxUpT2iIi8DtuLijOEN3OO6eCRh1UGfU00xFyt66Ml"
+); // Replace with your Stripe publishable key
+
 const Cart = (props) => {
   const { cartItems, setCartItems } = useContext(CartContext);
   const { showAlert } = useContext(AuthContext);
@@ -78,6 +84,53 @@ const Cart = (props) => {
       );
     }
   };
+
+  // const handleCheckout = async () => {
+  //   if (!props.user) return; // Ensure user is logged in
+
+  //   setLoading(true);
+
+  //   try {
+  //     const orderItems = newCartItems.map((item) => ({
+  //       name: item.name,
+  //       size: item.size,
+  //       photo: item.photo,
+  //       quantity: item.quantity,
+  //     }));
+  //     console.log(props.user._id);
+  //     console.log(orderItems);
+  //     console.log(finalPrice);
+
+  //     const response = await axios.post(
+  //       `http://127.0.0.1:8000/api/v1/orders/save-order`,
+  //       {
+  //         userId: props.user._id,
+  //         cartItems: orderItems,
+  //         finalPrice: finalPrice,
+  //         paymentCompleted: false, // Assuming payment is not completed immediately
+  //       }
+  //     );
+
+  //     console.log(response);
+
+  //     if (response.status === 201) {
+  //       showAlert("Order placed successfully!");
+  //       setNewCartItems([]);
+  //       setCartItems([]);
+  //       setUserCart([]);
+  //     } else {
+  //       showAlert("Failed Placeing Order. Try Again.");
+  //     }
+  //   } catch (error) {
+  //     console.error(
+  //       "Error placing order:",
+  //       error.response ? error.response.data : error.message
+  //     );
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleCheckout = async () => {
     if (!props.user) return; // Ensure user is logged in
 
@@ -94,7 +147,8 @@ const Cart = (props) => {
       console.log(orderItems);
       console.log(finalPrice);
 
-      const response = await axios.post(
+      // First Axios request to save the order
+      const orderResponse = await axios.post(
         `http://127.0.0.1:8000/api/v1/orders/save-order`,
         {
           userId: props.user._id,
@@ -104,26 +158,43 @@ const Cart = (props) => {
         }
       );
 
-      console.log(response);
+      console.log(orderResponse);
 
-      if (response.status === 201) {
-        showAlert("Order placed successfully!");
-        setNewCartItems([]);
-        setCartItems([]);
-        setUserCart([]);
+      if (orderResponse.status === 201) {
+        // Second Axios request to create Stripe Checkout session
+        const stripeResponse = await axios.post(
+          `http://127.0.0.1:8000/api/v1/orders/checkout`,
+          {
+            userId: props.user._id, // User ID
+            finalPrice: finalPrice, // Final price of the order
+            imageUrl: newCartItems[0]?.photo, // First product's image
+            cartData: orderItems, // Whole cart data
+          }
+        );
+
+        if (stripeResponse.status === 200) {
+          // Redirect user to Stripe Checkout
+          const stripe = await stripePromise;
+          await stripe.redirectToCheckout({
+            sessionId: stripeResponse.data.sessionId,
+          });
+
+          // Clear cart after successful order placement
+        } else {
+          showAlert("Failed to create payment session. Try Again.");
+        }
       } else {
-        showAlert("Failed Placeing Order. Try Again.");
+        showAlert("Failed Placing Order. Try Again.");
       }
     } catch (error) {
       console.error(
-        "Error placing order:",
+        "Error placing order or creating payment session:",
         error.response ? error.response.data : error.message
       );
     } finally {
       setLoading(false);
     }
   };
-
   if (!props.user) {
     return (
       <div className="cart-tack-box">

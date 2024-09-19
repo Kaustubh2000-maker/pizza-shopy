@@ -11,6 +11,8 @@ router
   .route("/save-order")
   .post(orderControllar.createOrder, userController.deleteCart);
 
+router.route("/checkout").post(orderControllar.createCheckoutSession);
+
 router.get("/getAllOrdersByUserId/:userId", orderControllar.getOrdersByUserId);
 
 module.exports = router;
