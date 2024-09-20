@@ -25,7 +25,11 @@ const OrderCard = ({ order }) => {
             className="order-card-photo"
             onError={handleError}
           />
-          <p className="order-card-detail">{order.items[0].name}</p>
+          <p className="order-card-detail">
+            {order.items[0].name.length > 14
+              ? `${order.items[0].name.slice(0, 14)}...`
+              : order.items[0].name}
+          </p>
         </div>
         <div className="order-card-div">
           <p className="order-card-detail">
@@ -36,12 +40,12 @@ const OrderCard = ({ order }) => {
         </div>
         <div className="order-card-div">
           <p className="order-card-detail">
-            {order.paymentCompleted ? "Success" : "Pending"}
+            {order.orderReceived ? "Success" : "Pending"}
           </p>
         </div>
         <div className="order-card-div">
           <p className="order-card-detail">
-            {order.orderReceived ? "Received" : "Pending"}
+            {order.paymentCompleted ? "Completed" : "Pending"}
           </p>
         </div>
 

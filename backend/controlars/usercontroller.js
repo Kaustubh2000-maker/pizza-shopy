@@ -267,7 +267,9 @@ exports.deleteProduct = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteCart = catchAsync(async (req, res, next) => {
-  const user = await User.findById(req.currentUserId);
+  const user = await User.findById(req.body.userId);
+
+  console.log(req.body);
 
   if (!user) {
     return next(new AppError("No user found with that ID", 404));

@@ -1586,7 +1586,7 @@ html::-webkit-scrollbar {
   position: absolute;
 
   top: 50%;
-  left: 20%;
+  left: 25%;
   transform: translate(-50%, -50%);
 
   width: 2rem;

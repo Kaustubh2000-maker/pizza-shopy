@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DataProvider } from "./Context/DataContext";
 import { AuthProvider, AuthContext } from "./Context/AuthContext";
@@ -11,6 +11,7 @@ import PizzaDetails from "./components/PizzaDetails";
 import Login from "./components/Login";
 import Donate from "./components/Donate";
 import Signin from "./components/Signin";
+import SuccessPage from "./components/SuccessPage";
 import Alert from "./components/Alert";
 import Account from "./components/Account";
 import AdminPizza from "./components/Admin/AdminPizza";
@@ -39,6 +40,9 @@ function AppContent() {
     fetchUserData();
     // eslint-disable-next-line
   }, []);
+  const [newCartItems, setNewCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+  const [userCart, setUserCart] = useState([]);
 
   return (
     <DataProvider>
@@ -54,7 +58,20 @@ function AppContent() {
           <Route exact path="/signin" element={<Signin />} />
           <Route exact path="/account" element={<Account user={user} />} />
           <Route exact path="/donate" element={<Donate />} />
+          <Route
+            exact
+            path="/success"
+            element={
+              <SuccessPage
+                user={user}
+                setNewCartItems={setNewCartItems}
+                setCartItems={setCartItems}
+                setUserCart={setUserCart}
+              />
+            }
+          />
           <Route exact path="/myOrders" element={<MyOrders user={user} />} />
+          <Route exact path="/pizza" element={<AdminPizza />} />
           <Route exact path="/pizza" element={<AdminPizza />} />
           <Route path="/:slug" element={<PizzaDetails />} />
         </Routes>

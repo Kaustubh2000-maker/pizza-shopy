@@ -14,7 +14,7 @@ const MyOrders = (props) => {
         const response = await axios.get(
           `http://127.0.0.1:8000/api/v1/orders/getAllOrdersByUserId/${user._id}`
         );
-        setOrders(response.data.data.orders);
+        setOrders(response.data.data.orders.reverse());
       } catch (err) {
         setError("Error fetching orders");
       } finally {

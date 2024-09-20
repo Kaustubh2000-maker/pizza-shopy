@@ -85,52 +85,6 @@ const Cart = (props) => {
     }
   };
 
-  // const handleCheckout = async () => {
-  //   if (!props.user) return; // Ensure user is logged in
-
-  //   setLoading(true);
-
-  //   try {
-  //     const orderItems = newCartItems.map((item) => ({
-  //       name: item.name,
-  //       size: item.size,
-  //       photo: item.photo,
-  //       quantity: item.quantity,
-  //     }));
-  //     console.log(props.user._id);
-  //     console.log(orderItems);
-  //     console.log(finalPrice);
-
-  //     const response = await axios.post(
-  //       `http://127.0.0.1:8000/api/v1/orders/save-order`,
-  //       {
-  //         userId: props.user._id,
-  //         cartItems: orderItems,
-  //         finalPrice: finalPrice,
-  //         paymentCompleted: false, // Assuming payment is not completed immediately
-  //       }
-  //     );
-
-  //     console.log(response);
-
-  //     if (response.status === 201) {
-  //       showAlert("Order placed successfully!");
-  //       setNewCartItems([]);
-  //       setCartItems([]);
-  //       setUserCart([]);
-  //     } else {
-  //       showAlert("Failed Placeing Order. Try Again.");
-  //     }
-  //   } catch (error) {
-  //     console.error(
-  //       "Error placing order:",
-  //       error.response ? error.response.data : error.message
-  //     );
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   const handleCheckout = async () => {
     if (!props.user) return; // Ensure user is logged in
 
@@ -143,9 +97,6 @@ const Cart = (props) => {
         photo: item.photo,
         quantity: item.quantity,
       }));
-      console.log(props.user._id);
-      console.log(orderItems);
-      console.log(finalPrice);
 
       // First Axios request to save the order
       const orderResponse = await axios.post(
@@ -158,7 +109,14 @@ const Cart = (props) => {
         }
       );
 
-      console.log(orderResponse);
+      const OrderId = orderResponse.data.newOrder._id;
+
+      setNewCartItems([]);
+      setCartItems([]);
+      setUserCart([]);
+      console.log(newCartItems, "newcartitems");
+      console.log(cartItems, "cartitems");
+      console.log(userCart, " useritems");
 
       if (orderResponse.status === 201) {
         // Second Axios request to create Stripe Checkout session
@@ -169,6 +127,7 @@ const Cart = (props) => {
             finalPrice: finalPrice, // Final price of the order
             imageUrl: newCartItems[0]?.photo, // First product's image
             cartData: orderItems, // Whole cart data
+            OrderId,
           }
         );
 
@@ -178,8 +137,6 @@ const Cart = (props) => {
           await stripe.redirectToCheckout({
             sessionId: stripeResponse.data.sessionId,
           });
-
-          // Clear cart after successful order placement
         } else {
           showAlert("Failed to create payment session. Try Again.");
         }
@@ -195,6 +152,7 @@ const Cart = (props) => {
       setLoading(false);
     }
   };
+
   if (!props.user) {
     return (
       <div className="cart-tack-box">
