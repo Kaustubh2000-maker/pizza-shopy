@@ -9,3 +9,7 @@ export const LOGIN = `${BACKEND_URL}/users/login`;
 
 export const pizzas_url = `${BACKEND_URL}/pizzas`;
 export const beverages_url = `${BACKEND_URL}/beverages`;
+
+// cart add
+
+export const ADD_CART = (userId) => `${BACKEND_URL}/users/${userId}`;

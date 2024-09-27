@@ -29,10 +29,7 @@ const BeverageCard = ({ beverage, user }) => {
       userId = currentUser._id;
 
       try {
-        const response = await axios.post(
-          `http://127.0.0.1:8000/api/v1/users/addToCart/${userId}`,
-          cartItem
-        );
+        const response = await axios.post(ADD_CART(userId), cartItem);
 
         if (response.status === 200) {
           addToCart(cartItem);
