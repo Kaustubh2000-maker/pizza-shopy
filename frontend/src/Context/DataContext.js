@@ -13,7 +13,7 @@ const DataProvider = ({ children }) => {
     try {
       const [pizzasResponse, beveragesResponse] = await Promise.all([
         fetch("https://pizza-shopy-backend.onrender.com/api/v1/pizzas"),
-        fetch("http://127.0.0.1:8000/api/v1/beverages"),
+        fetch("https://pizza-shopy-backend.onrender.com/api/v1/beverages"),
       ]);
 
       const pizzasData = await pizzasResponse.json();
