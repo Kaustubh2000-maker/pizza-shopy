@@ -89,6 +89,7 @@ const Cart = (props) => {
     if (!props.user) return; // Ensure user is logged in
 
     setLoading(true);
+    // console.log(newCartItems);
 
     try {
       const orderItems = newCartItems.map((item) => ({

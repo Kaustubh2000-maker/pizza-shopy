@@ -91,9 +91,9 @@ exports.createCheckoutSession = catchAsync(async (req, res, next) => {
         name: item.name,
         images: [item.photo || imageUrl], // Use the item's photo or fallback to imageUrl
       },
-      unit_amount: Math.round(finalPrice * 100), // Convert price to cents
+      unit_amount: finalPrice * 100, // Divide finalPrice by the total quantity to get price per item in cents
     },
-    quantity: item.quantity,
+    quantity: 1,
   }));
 
   // Create Stripe Checkout session
@@ -126,7 +126,7 @@ exports.updatePaymentStatus = catchAsync(async (req, res, next) => {
   // Find the order by ID and update payment status
   const updatedOrder = await Order.findByIdAndUpdate(
     orderId,
-    { paymentCompleted: true },
+    { paymentCompleted: true, orderReceived: true },
     { new: true, runValidators: true }
   );
 
