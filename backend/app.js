@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const pizzaRouter = require("./routes/pizzaRoutes");
 const beverageRouter = require("./routes/beverageRoutes");
@@ -10,16 +11,18 @@ const userRouter = require("./routes/userRoutes");
 const orderRouter = require("./routes/orderRoutes");
 
 const AppError = require("./utils/appError");
-const globalErrorHandlar = require("./controlars/errorControllar");
-const cors = require("cors");
+const globalErrorHandler = require("./controllers/errorController");
 
 const app = express();
 app.use(express.json());
 
+// CORS configuration
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000", "https://pizza-shopy.onrender.com"], // Allow both local and deployed frontends
   credentials: true, // This allows cookies to be sent with requests
 };
+
+// Use CORS middleware
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
@@ -43,6 +46,7 @@ app.all("*", (req, res, next) => {
   next(new AppError(`The url ${req.originalUrl} is not present`, 404));
 });
 
-app.use(globalErrorHandlar);
+// Use the global error handler
+app.use(globalErrorHandler);
 
 module.exports = app;
