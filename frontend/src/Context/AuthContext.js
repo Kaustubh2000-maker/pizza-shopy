@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { GET_USER, LOGIN, SIGNUP } from "../constants/api.constants";
 // import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
@@ -19,10 +20,9 @@ const AuthProvider = ({ children }) => {
 
     if (userId && jwtCookie) {
       try {
-        const response = await axios.get(
-          `http://127.0.0.1:8000/api/v1/users/${userId}`,
-          { withCredentials: true }
-        );
+        const response = await axios.get(GET_USER(userId), {
+          withCredentials: true,
+        });
 
         setUser(response.data.data.data);
         setIsLoggedIn(true);
@@ -40,7 +40,7 @@ const AuthProvider = ({ children }) => {
   const signup = async (name, email, password, passwordConfirm) => {
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/v1/users/signup",
+        SIGNUP,
         { name, email, password, passwordConfirm },
         { withCredentials: true }
       );
@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/v1/users/login",
+        LOGIN,
         { email, password },
         { withCredentials: true }
       );
