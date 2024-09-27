@@ -1,5 +1,6 @@
 // src/contexts/DataContext.js
 import React, { createContext, useState, useEffect } from "react";
+import { pizzas_url, beverages_url } from "./../constants/api.constants";
 
 const DataContext = createContext();
 
@@ -12,8 +13,8 @@ const DataProvider = ({ children }) => {
   const fetchData = async () => {
     try {
       const [pizzasResponse, beveragesResponse] = await Promise.all([
-        fetch("https://pizza-shopy-backend.onrender.com/api/v1/pizzas"),
-        fetch("https://pizza-shopy-backend.onrender.com/api/v1/beverages"),
+        fetch(pizzas_url),
+        fetch(beverages_url),
       ]);
 
       const pizzasData = await pizzasResponse.json();
